@@ -1,6 +1,7 @@
 <div class="row">
   <aside class="col-xs-4">
     <div class="panel panel-default">
+
       <div class="panel-heading">
         <h3 class="panel-title">
           <%= @user.name %>
@@ -9,9 +10,10 @@
 
       <div class="panel-body">
         <img class="media-object img-rounded img-responsive" src="
-          <%= gravatar_url(@user, { size: 500 }) %>
-          " alt="">
+        <%= gravatar_url(@user, { size: 500 }) %>
+        " alt="">
       </div>
+
     </div>
 
     <%= render 'relationships/follow_button', user: @user %>
@@ -48,8 +50,7 @@
       </li>
 
     </ul>
-
-<%= render 'microposts/microposts', microposts: @microposts %>
-
+    <%= render 'users', users: @followers %>
   </div>
+
 </div>
