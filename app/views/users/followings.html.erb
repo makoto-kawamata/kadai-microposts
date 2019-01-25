@@ -46,6 +46,14 @@
           <% end %>
       </li>
 
+      <li class="
+        <%= 'active' if current_page?(likes_user_path(@user)) %>">
+          <%= link_to likes_user_path(@user) do %>
+            Likes <span class="badge">
+              <%= @count_likings %></span>
+        <% end %>
+      </li>
+
     </ul>
 
     <%= render 'users', users: @followings %>
